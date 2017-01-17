@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  resources :orders
+  resources :orders do
+    resources :comments
+  end
   resources :users do
   member do
     get :orders

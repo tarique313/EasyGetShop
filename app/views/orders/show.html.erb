@@ -9,6 +9,11 @@
   <strong>Status:</strong>
   <%= @order.status %>
 </p>
+<h2>Comments</h2>
+<%= render @order.comments %>
+<br>
+<%= render "comments/form"%>
+
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

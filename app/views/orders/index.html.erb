@@ -26,7 +26,7 @@
       </tr>
     <% end %>
     <% else %>
-    <span>Sorry, You have no order </span>
+    <span>Sorry, You have no order. <%= link_to "create", new_order_path%> your first order. </span>
     <%end%>
   </tbody>
 </table>
