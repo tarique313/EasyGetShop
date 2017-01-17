@@ -1,0 +1,22 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "EasyGetShop", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+
+            <li><%= link_to "Home",   '#' %></li>
+            <% if user_signed_in? %>
+            <li><%= link_to "Your Orders"%></li>
+            <li><%= link_to "Create New Order"%></li>
+            <li><%= link_to "Edit My Account", edit_user_registration_path%></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, :method => 'delete'%></li>
+            <% else %>
+            <li><%= link_to "Log in", '#' %></li>
+            <li><%= link_to "Sign Up", '#' %></li>
+            <% end %>
+            <li><%= link_to "Help",   '#' %></li>
+            <li><%= link_to "Contact Us"%></li>
+          </ul>
+        </nav>
+      </div>
+    </header>

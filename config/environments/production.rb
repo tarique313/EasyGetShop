@@ -80,7 +80,8 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
-
+RECAPTCHA_SITE_KEY= '6LeOGxIUAAAAAJ8EbeBYTBAYC3QNDJQlu32Sh2P0'
+RECAPTCHA_SECRET_KEY= '6LeOGxIUAAAAABrlP92xxJ2HMR5NrwB-dZ9SIxUu'
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
