@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+ <% if @orders.present? %>
 
 <h1>Order list of <strong><%= current_user.name%></strong></h1>
 <hr>
@@ -15,7 +15,7 @@
   </thead>
 
   <tbody>
-  <% if @orders.present? %>
+ 
     <% @orders.each do |order| %>
       <tr>
         <td><%= order.body %></td>
