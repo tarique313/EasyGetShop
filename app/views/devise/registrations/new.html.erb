@@ -1,49 +1,22 @@
 <h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_area :address, autofocus: true %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :fb_id %><br />
-    <%= f.text_field :fb_id, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
+<%= f.input :name, label: "Full Name", placeholder: "Please enter your full name", error: 'Full Name is mandatory, please specify one'%>
+<%= f.input :email, label: "email", placeholder: "Enter Email", error: 'Email is mandatory, please specify one'%>
+<%= f.input :address, label: "Shipping Address", as: :text, error: 'Address is mandatory, please specify one'%>
+<%= f.input :phone, label: "Phone", placeholder: "Ex: 0155XXXXXXX",error: 'Phone is mandatory, please specify one' %>
+<%= f.input :fb_id, label: "Facebook ID", placeholder: "Ex: fb.com/username OR username ", error: 'Your facebook id is mandatory, please specify one'%>
+<% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+<%= f.input :password, placeholder: "Password", error: 'Password is mandatory, please specify one' %>
+<%= f.input :password_confirmation, placeholder: "Repeat Password" %>
+<%= f.button :submit, class: "btn btn-primary"%>    
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>

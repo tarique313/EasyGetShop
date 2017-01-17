@@ -1,9 +1,10 @@
-<%= form_for([@order, @order.comments.build]) do |f| %>
-	<div class="field">
-		<%= f.label :Comment %> <br>
-		<%= f.text_area :content%>
+<div class="row">
+	<div class="col-md-6">
+	<%= simple_form_for([@order, @order.comments.build]) do |f| %>
+		<%= f.input :content, label: "Comment", as: :text %>
+		<%= f.button :submit, "Add Comment", class: "btn btn-default btn-xs" %>	
+	<% end %>
 	</div>
-<div class="actions">
-<%= f.button :submit %>
 </div>
-<% end %>
+<br>
+
