@@ -25,7 +25,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = current_user.orders.build(order_params) if signed_in?#Order.new(order_params)current_user.microposts.build(micropost_params)
+    @order = current_user.orders.build(order_params) #Order.new(order_params)current_user.microposts.build(micropost_params)
 
     respond_to do |format|
       if @order.save

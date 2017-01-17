@@ -1,16 +1,12 @@
 <p id="notice"><%= notice %></p>
-
+<div class="well">
 <p>
-  <strong>Body:</strong>
+  <strong>Order:</strong>
   <%= @order.body %>
 </p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @order.status %>
-</p>
-<h2>Comments</h2>
-<%= render @order.comments %>
+</div>
+<hr>
+<%= render @order.comments %>(<%= @order.comments.count%>)
 <br>
 <%= render "comments/form"%>
 
