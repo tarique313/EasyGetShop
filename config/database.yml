@@ -83,5 +83,5 @@ test:
 production:
   <<: *default
   database: easy_get_shop_production
-  username: easy_get_shop
-  password: <%= ENV['EASY_GET_SHOP_DATABASE_PASSWORD'] %>
+  username: gazi
+  password: mirpurparibagh313

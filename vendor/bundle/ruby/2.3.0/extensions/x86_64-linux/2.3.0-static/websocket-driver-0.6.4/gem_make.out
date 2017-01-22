@@ -1,0 +1,15 @@
+current directory: /home/gazi/EasyGetShop/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.4/ext/websocket-driver
+/home/gazi/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20170122-19924-i9we24.rb extconf.rb
+creating Makefile
+
+current directory: /home/gazi/EasyGetShop/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.4/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/gazi/EasyGetShop/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.4/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/gazi/EasyGetShop/vendor/bundle/ruby/2.3.0/gems/websocket-driver-0.6.4/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20170122-19924-1w72u9l
