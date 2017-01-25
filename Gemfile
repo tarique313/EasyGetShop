@@ -24,7 +24,7 @@ gem 'dotenv-rails', :require => 'dotenv/rails-now'
 gem "recaptcha", require: "recaptcha/rails"
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
-
+gem 'figaro'
 group :development, :test do
   gem 'byebug', platform: :mri
 end
