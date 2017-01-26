@@ -78,8 +78,21 @@ config.action_mailer.default_url_options = { :host => 'easyget.shop' }
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
-RECAPTCHA_SITE_KEY= ENV["RECAPTCHA_SITE_KEY"]
-RECAPTCHA_SECRET_KEY= ENV["RECAPTCHA_SECRET_KEY"]
+  config.action_mailer.default_options = { from: Rails.application.secrets.gmail_username }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings = {
+      :address   => 'smtp.gmail.com',
+      #:domain    => 'mail.google.com',
+      :port      => 587,
+      :user_name => Rails.application.secrets.gmail_username,
+      :password  => Rails.application.secrets.gmail_cred,
+      :authentication => 'login',
+      :enable_starttls_auto => true 
+    }
+RECAPTCHA_SITE_KEY= Rails.application.secrets.recaptcha_site_key
+  RECAPTCHA_SECRET_KEY= Rails.application.secrets.recaptcha_secret_key
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
     config.action_mailer.delivery_method = :smtp

@@ -8,7 +8,7 @@ class CommentMailer < ActionMailer::Base
 	@content = content
 	
 	mail(to: order_user.email,
-		from: "mahmud.tarique@gmail.com",
+		from: Rails.application.secrets.gmail_username,
 		subject: "Commment Created",
 		body: "First comment mailer") 
 	end
