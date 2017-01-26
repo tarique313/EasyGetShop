@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :orders, dependent: :destroy
   has_many :comments, dependent: :destroy
   #after_create { Notifier.welcome_email(self).deliver }
+  validates_presence_of :name, :email, :address, :phone, :fb_id
 end
