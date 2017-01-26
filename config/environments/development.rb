@@ -51,8 +51,21 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_options = { from: Rails.application.secrets.gmail_username }
   config.action_mailer.delivery_method = :smtp
-RECAPTCHA_SITE_KEY= '6LeOGxIUAAAAAJ8EbeBYTBAYC3QNDJQlu32Sh2P0'
-RECAPTCHA_SECRET_KEY= '6LeOGxIUAAAAABrlP92xxJ2HMR5NrwB-dZ9SIxUu'
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings = {
+      :address   => 'smtp.gmail.com',
+      #:domain    => 'mail.google.com',
+      :port      => 587,
+      :user_name => Rails.application.secrets.gmail_username,
+      :password  => Rails.application.secrets.gmail_cred,
+      :authentication => 'login',
+      :enable_starttls_auto => true,
+       #:openssl_verify_mode => 'none'  
+
+    }
+  RECAPTCHA_SITE_KEY= Rails.application.secrets.recaptcha_site_key
+  RECAPTCHA_SECRET_KEY= Rails.application.secrets.recaptcha_secret_key
 end

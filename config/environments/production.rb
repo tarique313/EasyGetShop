@@ -3,17 +3,15 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
+config.action_mailer.perform_deliveries = true  
 
-  # Eager load code on boot. This eager loads most of Rails and
-  # your application in memory, allowing both threaded web servers
-  # and those relying on copy on write to perform better.
-  # Rake tasks automatically ignore this option for performance.
+  
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-
+config.action_mailer.default :charset => "utf-8"
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
@@ -59,7 +57,7 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -74,14 +72,29 @@ Rails.application.configure do
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
-
+config.action_mailer.default_url_options = { :host => 'easyget.shop' }
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
-RECAPTCHA_SITE_KEY= '6LeOGxIUAAAAAJ8EbeBYTBAYC3QNDJQlu32Sh2P0'
-RECAPTCHA_SECRET_KEY= '6LeOGxIUAAAAABrlP92xxJ2HMR5NrwB-dZ9SIxUu'
+  config.action_mailer.default_options = { from: Rails.application.secrets.gmail_username }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings = {
+      :address   => 'smtp.gmail.com',
+      #:domain    => 'mail.google.com',
+      :port      => 587,
+      :user_name => Rails.application.secrets.gmail_username,
+      :password  => Rails.application.secrets.gmail_cred,
+      :authentication => 'login',
+      :enable_starttls_auto => true 
+    }
+RECAPTCHA_SITE_KEY= Rails.application.secrets.recaptcha_site_key
+  RECAPTCHA_SECRET_KEY= Rails.application.secrets.recaptcha_secret_key
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+    config.action_mailer.delivery_method = :smtp
+
 end

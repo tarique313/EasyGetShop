@@ -1,15 +1,18 @@
 <p id="notice"><%= notice %></p>
  <% if @orders.present? %>
 
-<h1>Order list of <strong><%= current_user.name%></strong></h1>
+<h2>Order list of <strong><%= current_user.name%></strong></h2>
+    <center>--------------------------------------------</center>
+    <center><h3>Customer ID: <strong><%= current_user.id%></strong></div></h3></center>
+
 <hr>
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Order</th>
-      <th>Order Status</th>
-      <th>Order Date</th>
-      <th>Comments</th>
+      <th>অর্ডার (Order)</th>
+      <th>অর্ডারের অবস্থা (Order Status)</th>
+      <th>অর্ডারের তারিখ (Order Date)</th>
+      <th>মন্তব্য সমূহ (Comments)</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,26 +23,26 @@
       <tr>
         <td><%= order.body %></td>
         <% if order.status == true %>
-        <td><span class="label label-success">Product Delivered</span></td>
+        <td><span class="label label-success">আপনার প্রোডাক্ট এসেছে (Product Delivered) </span></td>
         <% else %>
-        <td><span class="label label-warning">Shipping is in Progress</span></td>
+        <td><span class="label label-warning">আপনার প্রোডাক্ট এখনো পৌঁছেনি (Shipping is in Progress)</span></td>
         <% end %>
         <td><%= order.created_at%></td>
         <td><%= link_to order.comments.count, order, class: "badge" %></td>
            <% if (order.user_id == current_user.id) || (current_user.adminuser?)%>
 
-        <td><%= link_to 'Show', order, class: "btn btn-default btn-xs" %></td>
-        <td><%= link_to 'Edit', edit_order_path(order), class: "btn btn-default btn-xs" %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" %></td>
+        <td><%= link_to 'দেখুন (Show)', order, class: "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'সম্পাদনা (Edit)', edit_order_path(order), class: "btn btn-default btn-xs" %></td>
+        <td><%= link_to 'মুছুন (Destroy) ', order, method: :delete, data: { confirm: 'আপনি নিশ্চিত? (Are you sure?)' }, class: "btn btn-danger btn-xs" %></td>
         <%end%>
       </tr>
     <% end %>
     <% else %>
-    <span>Sorry, You have no order. <%= link_to "create", new_order_path%> your first order. </span>
+    <span> দুঃখিত, আপনি এখনো কোন অর্ডার করেন নি । (Sorry, You have no order.) <%= link_to "create", new_order_path%> your first order. </span>
     <%end%>
   </tbody>
 </table>
 
 <br>
 
-<center><%= link_to 'New Order', new_order_path, class: "btn btn-primary btn-lg" %></center>
+<center><%= link_to 'নতুন অর্ডার করুন । (New Order)', new_order_path, class: "btn btn-primary btn-lg" %></center>

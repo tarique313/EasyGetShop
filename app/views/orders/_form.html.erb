@@ -1,8 +1,7 @@
-
 <%= form_for(order) do |f| %>
   <% if order.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+      <h4><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h4>
 
       <ul>
       <% order.errors.full_messages.each do |message| %>
@@ -13,8 +12,8 @@
   <% end %>
 <div class="row">
 
-  <div class="form-group">
-    <%= f.text_area :body, class: "col-md-6 col-md-offset-3 tinymce", placeholder: "Paste the Aliexpress Order Url here." %>
+  <div class="form-group">)(
+    <%= f.text_area :body, class: "col-md-6 col-md-offset-3", placeholder: "আপনার আলীএক্সপ্রেস অর্ডারের লিঙ্ক এখানে পেস্ট করুন। (Paste the Aliexpress Order Url here.)" %>
   </div>
     
 </div>
@@ -24,7 +23,7 @@
   </div> -->
 <br>
   <div class="form-group">
-  <center><%= f.submit class: 'btn btn-primary ' %></center>
+  <center><%= f.submit class: 'btn btn-primary ', text: "অর্ডার করুন" %></center>
   </div>
   
 <% end %>
