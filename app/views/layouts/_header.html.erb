@@ -1,7 +1,12 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to image_tag("logo.png", alt: "logo"), orders_path, id: "logo",  class: 'navbar-brand'%>
-        <nav>
+      <% if user_signed_in? %>
+              <%= link_to image_tag("logo.png", alt: "logo"), orders_path, id: "logo",  class: 'navbar-brand'%>
+
+    <% else %>
+                      <%= link_to image_tag("logo.png", alt: "logo"), root_path, id: "logo",  class: 'navbar-brand'%>
+
+<% end %>        <nav>
           <ul class="nav navbar-nav navbar-right">
 
             <li><%= link_to "Home", orders_path%></li>
