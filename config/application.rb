@@ -13,6 +13,6 @@ module EasyGetShop
     # -- all .rb files in that directory are automatically loaded.
  #config.i18n.available_locales = [:en, :bn]
   #config.i18n.default_locale = :bn
-    
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end

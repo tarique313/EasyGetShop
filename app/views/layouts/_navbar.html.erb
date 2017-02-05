@@ -1,0 +1,74 @@
+<!-- Page Wrapper -->
+
+
+  <!-- Navbar -->
+  <!-- Remove ".navbar-sticky" class to make navigation bar scrollable with the page. -->
+  <header class="navbar navbar-sticky">
+
+    <!-- Site Logo -->
+    <a href="index.html" class="site-logo visible-desktop">
+      <span>[</span> M
+      <span class="text-gray">/</span>
+      STORE <span>]</span>
+    </a><!-- site-logo.visible-desktop -->
+    <a href="index.html" class="site-logo visible-mobile">
+      <span>[</span> M <span>]</span>
+    </a><!-- site-logo.visible-mobile -->
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+      <div class="lang-toggle">
+        <!--
+                <img src="img/flags/GB.png" alt="English">
+        -->
+        ভাষা নির্বাচন করুনঃ
+        <%= image_tag('flags/BD.png' , alt: "")%>
+        <i class="material-icons arrow_drop_down"></i>
+        <ul class="lang-dropdown">
+          <li><a href=""><%= image_tag('flags/GB.png', alt: "English") %>English</a></li>
+        </ul>
+      </div>
+    </div><!-- .lang-switcher -->
+
+    <!-- Main Navigation -->
+    <!-- Control the position of navigation via modifier classes: "text-left, text-center, text-right" -->
+    <nav class="main-navigation text-center">
+      <ul class="menu">
+        <li class="current-menu-item">
+          <a href="">Home</a>
+        </li>
+        <li class="menu-item-has-children">
+          <a href="#">Shop</a>
+          <ul class="sub-menu">
+            <li><a href="shop-fullwidth-sl.html">Full Width Sidebar Left</a></li>
+            <li><a href="shop-fullwidth-sr.html">Full Width Sidebar Right</a></li>
+            <li><a href="shop-fullwidth-ft.html">Full Width Filters Top</a></li>
+            <li><a href="shop-boxed-sl.html">Boxed Sidebar Left</a></li>
+            <li><a href="shop-boxed-sr.html">Boxed Sidebar Right</a></li>
+            <li><a href="shop-boxed-ft.html">Boxed Filters Top</a></li>
+            <li><a href="shop-single.html">Single Product</a></li>
+            <li><a href="shopping-cart.html">Shopping Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="login.html">Login / Register Page</a></li>
+            <li><a href="account.html">User Account Page</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="menu-item-has-children">
+          <a href="#">Gallery</a>
+          <ul class="sub-menu">
+            <li><a href="gallery-fullwidth-with-gap.html">Full Width With Gap</a></li>
+            <li><a href="gallery-fullwidth-no-gap.html">Full Width No Gap</a></li>
+            <li><a href="gallery-boxed-with-gap.html">Boxed With Gap</a></li>
+            <li><a href="gallery-boxed-no-gap.html">Boxed No Gap</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li class="hidden-md"><a href="elements.html">Elements</a></li>
+      </ul><!-- .menu -->
+    </nav><!-- .main-navigation -->
+
+
+  </header>

@@ -11,8 +11,25 @@
 // about supported directives.
 //
 //= require jquery
-//= require tether
-//= require bootstrap-sprockets
+//= require jquery-2.1.4.min
+//= require bootstrap
 //= require jquery_ujs
+//= require bootstrap.min
+//= require smoothscroll
+//= require velocity.min
+//= require waves.min
+//= require icheck.min
+//= require owl.carousel.min
+//= require jquery.downCount
+//= require magnific-popup.min
+//= require scripts
+//= require gmap3.min
+//= require isotope.pkgd.min
+//= require mailer
+//= require modernizr.custom
+//= require nouislider.min
+//= require page-preloading
 //= require turbolinks
+
+//= require_tree .
 //= require_tree .

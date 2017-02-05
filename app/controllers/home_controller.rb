@@ -7,7 +7,7 @@ class HomeController < ApplicationController
   #	redirect_to new_user_session_path 
   	
   #	end
- puts "Hello world"
+
  end
 
   def profile

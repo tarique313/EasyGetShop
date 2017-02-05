@@ -11,3 +11,4 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 #Rails.application.config.assets.precompile += %w( navbar-static-top.css)
 
+Rails.application.config.assets.precompile << /\.(?:png|jpg|jpeg|gif)\z/
