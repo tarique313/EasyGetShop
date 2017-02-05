@@ -1,48 +1,43 @@
+< class="container">
 <p id="notice"><%= notice %></p>
  <% if @orders.present? %>
-
-<h2>Order list of <strong><%= current_user.name%></strong></h2>
+<h2><%= t ".order_owner" %> <strong><%= current_user.name%></strong> <%= t ".who"%></h2>
     <center>--------------------------------------------</center>
-    <center><h3>Customer ID: <strong><%= current_user.id%></strong></div></h3></center>
-
+    <center><h3><%= t ".customer_id"%> <strong><%= current_user.id%></strong></h3></center>
 <hr>
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Order</th>
-      <th>Order Status</th>
-      <th>Order Date</th>
-      <th>Comments</th>
+      <th><%= t ".order_link"%></th>
+      <th><%= t ".order_status"%></th>
+      <th><%= t ".order_date"%></th>
+      <th><%= t ".order_comments"%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
- 
     <% @orders.each do |order| %>
       <tr>
         <td><%= order.body %></td>
         <% if order.status == true %>
-        <td><span class="label label-success">আপনার প্রোডাক্ট এসেছে (Product Delivered) </span></td>
+          <td><span class="label label-success"><%= t ".success_status" %></span></td>
         <% else %>
-        <td><span class="label label-warning">আপনার প্রোডাক্ট এখনো পৌঁছেনি (Shipping is in Progress)</span></td>
+          <td><span class="label label-warning"><%= t ".onhold_status" %></span></td>
         <% end %>
         <td><%= order.created_at%></td>
         <td><%= link_to order.comments.count, order, class: "badge" %></td>
            <% if (order.user_id == current_user.id) || (current_user.adminuser?)%>
-
-        <td><%= link_to 'দেখুন (Show)', order, class: "btn btn-default btn-xs" %></td>
-        <td><%= link_to 'সম্পাদনা (Edit)', edit_order_path(order), class: "btn btn-default btn-xs" %></td>
-        <td><%= link_to 'মুছুন (Destroy) ', order, method: :delete, data: { confirm: 'আপনি নিশ্চিত? (Are you sure?)' }, class: "btn btn-danger btn-xs" %></td>
-        <%end%>
+                <td><%= link_to (t ".show_button"), order, class: "btn btn-default btn-xs" %></td>
+                <td><%= link_to (t ".edit_button"), edit_order_path(order), class: "btn btn-default btn-xs" %></td>
+                <td><%= link_to (t ".destroy_button"), order, method: :delete, data: { confirm:  (t ".destroy_confirmation") }, class: "btn btn-danger btn-xs" %></td>
+          <%end%>
       </tr>
     <% end %>
     <% else %>
-    <span> দুঃখিত, আপনি এখনো কোন অর্ডার করেন নি । (Sorry, You have no order.) <%= link_to "create", new_order_path%> your first order. </span>
+      <span><%= t ".noorder_message"%><%= link_to (t ".noorder_create_message"), new_order_path%> <%= t ".create_first_order"%> </span>
     <%end%>
   </tbody>
 </table>
-
 <br>
-
-<center><%= link_to 'নতুন অর্ডার করুন । (New Order)', new_order_path, class: "btn btn-primary btn-lg" %></center>
+<center><%= link_to (t ".new_order_button"), new_order_path, class: "btn btn-primary btn-lg" %></center>
+  </div>

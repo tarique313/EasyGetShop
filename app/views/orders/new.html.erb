@@ -1,5 +1,5 @@
-<h2>নতুন অর্ডার তৈরি করুন (Creat a New Order)</h2>
+<h2><%= t ".new_order_title"%></h2>
 <hr>
 
 <%= render 'form', order: @order %>   
-<center><%= link_to 'Back', orders_path, class: "btn btn-default btn-xs" %></center>
+<center><%= link_to (t ".back_button"), orders_path, class: "btn btn-default btn-xs" %></center>

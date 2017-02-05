@@ -1,19 +1,19 @@
-<h2>Sign up</h2>
+<h2><%= t ".registration"%></h2>
 <div class="row">
 <div class="col-md-6 col-md-offset-3">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-<%= f.input :name, label: "Full Name", placeholder: "Please enter your full name", error: 'Full Name is mandatory, please specify one'%>
-<%= f.input :email, label: "email", placeholder: "Enter Email", error: 'Email is mandatory, please specify one'%>
-<%= f.input :address, label: "Shipping Address", as: :text, error: 'Address is mandatory, please specify one'%>
-<%= f.input :phone, label: "Phone", placeholder: "Ex: 0155XXXXXXX",error: 'Phone is mandatory, please specify one' %>
-<%= f.input :fb_id, label: "Facebook ID", placeholder: "Ex: fb.com/username OR username ", error: 'Your facebook id is mandatory, please specify one'%>
+<%= f.input :name, label: (t ".full_name"), placeholder: (t ".full_name_placeholder"), error: (t ".full_name_error_message")%>
+<%= f.input :email, label: (t ".email"), placeholder: (t ".email_placeholder"), error: (t ".email_error_message")%>
+<%= f.input :address, label: (t ".shipping_address"), as: :text, error: (t ".shipping_address_error_message")%>
+<%= f.input :phone, label: (t ".phone"), placeholder: (t ".phone_placehoder"),error: (t ".phone_error_message") %>
+<%= f.input :fb_id, label: (t ".facebook_id"), placeholder: (t ".facebook_id_placeholder"), error: (t ".facebook_id_error_massage")%>
 <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> <%= t (".minimum_character_message") %></em>
     <% end %><br />
-<%= f.input :password, placeholder: "Password", error: 'Password is mandatory, please specify one' %>
-<%= f.input :password_confirmation, placeholder: "Repeat Password" %>
-<%= f.button :submit, class: "btn btn-primary"%>    
+<%= f.input :password, label: (t ".pasword"), placeholder: (t ".password_placeholder"), error: (t ".password_error_message") %>
+<%= f.input :password_confirmation, label: (t ".confirm_password"), placeholder: (t ".confirm_password_placeholder") %>
+<%= f.button :submit, (t ".signup_button"), class: "btn btn-primary"%>
 
 <% end %>
 

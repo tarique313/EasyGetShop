@@ -1,0 +1,160 @@
+bn:
+  orders:
+    index:
+      order_owner: " অর্ডারটি"
+      who: "এর"
+      customer_id: "আপনার কাস্টমার আইডিঃ"
+      order_link: "অর্ডার"
+      order_status: "অর্ডারের অবস্থা"
+      order_date: "অর্ডার করার তারিখ"
+      order_comments: "অর্ডারে করা কমেন্ট সমূহ"
+      success_status: "প্রোডাক্ট এসেছে"
+      onhold_status: "প্রোডাক্ট এখনও আসেনি"
+      show_button: "দেখুন"
+      edit_button: "এডিট"
+      destroy_button: "ডিলিট"
+      destroy_confirmation: "আপনি কী নিশ্চিত?"
+      no-order_message: " দুঃখিত, আপনার কোন অর্ডার নেই ।"
+      no-order_create_message: "তৈরি করুন"
+      create_first_order: " আপনার প্রথম অর্ডার টি ।"
+      new_order_button: "নতুন অর্ডার"
+    form:
+      prohibated_message: " দুঃখিত! এই মুহুর্তে আপনার অর্ডার টি নেওয়া সম্ভব হচ্ছে না ।"
+      aliexpress_url: "আপনার কাঙ্ক্ষিত আলীএক্সপ্রেসের প্রোডাক্টের লিঙ্কটি (আলীএক্সপ্রেসের ) পেস্ট করুন। "
+      create_order_button: "অর্ডার করুন"
+    new:
+      new_order_title: "নতুন অর্ডার তৈরি করুন"
+      back_button: "পুর্ববর্তি পেইজে ফিরে যান"
+    edit:
+      editing_order: "অর্ডার সম্পাদনা"
+      edit_button: "সম্পাদনা"
+      show_button: "দেখুন"
+      back_button: "পুর্ববর্তি পেইজে ফিরে যান"
+  devise:
+    registrations:
+      edit:
+        full_name: "পুরো নাম"
+        full_name_placeholder: "আপনার পুরো নাম লিখুন "
+        email: "ইমেইল"
+        email_placeholder: "আপনার সঠিক ইমেল ঠিকানা লিখুন"
+        shipping_address: "প্রডাক্ট পৌছানোর ঠিকানা"
+        phone: "ফোন নাম্বারঃ"
+        phone_placeholder: "উদাহরণঃ ০১৫********"
+        facebook_id: "আপনার ফেইসবুক আইডি"
+        facebook_id_placeholder: "উদাহরণ: http://facebook.com/username OR username"
+        password: "পাসওয়ার্ড"
+        password_placeholder: "আপনার পাসওয়ার্ড দিন"
+        minimum_character_message: "সর্বনিম্ন অক্ষর)"
+        repeat_password: "পুনরায় পাসওয়ার্ড দিন"
+        repeat_password_message: "(তথ্য পরিবর্তনের জন্য আপনার বর্তমান পাসওয়ার্ড প্রয়োজন)"
+        current_password: "বর্তমান পাসওয়ার্ড"
+        current_password_placeholder: "বর্তমান পাসওয়ার্ড দিন"
+        cancel_my_account: "আমার অ্যাকাউন্ট বন্ধ করুন"
+        cancel_my_account_button_text: "আমার অ্যাকাউন্ট বন্ধ করুন"
+        cancel_my_account_confirmation_pop_up: "আপনার অ্যাকাউন্ট বন্ধ করার ব্যাপারে কী আপনি নিশ্চিত?"
+        back_button: "পুর্ববর্তি পেইজে ফিরে যান"
+        currently_waiting_confirmation_for: "নিশ্চিতকরনের জন্য বর্তমানে অপেক্ষারত:"
+        leave_blank_if_you_dont_want_to_change_it: "(তথ্য পরিবর্তন না করলে এই ঘরটি খালি রাখুন)"
+        unhappy: "আপনি সন্তুষ্ট না?"
+        button_text: "আপনার তথ্য হালনাগাত করুন"
+      new:
+        registration: "রেজিস্ট্রেশন"
+        full_name: "পুরো নাম"
+        full_name_placeholder: "আপনার পুরো নাম দিন"
+        full_name_error_message: "দয়া করে আপনার পুরো নাম দিন, এটা আবশ্যক।"
+        email: "ইমেইল"
+        email_placeholder: "আপনার ইমেইল ঠিকানা দিন"
+        email_error_message: "দয়া করে আপনার ইমেইল ঠিকানা দিন, এটা আবশ্যক।"
+        shipping_address_error_message: "দয়া করে আপনার প্রোডাক্ট পৌছানোর ঠিকানা দিন, এটা আবশ্যক।"
+        shipping_address: "প্রোডাক্ট পৌছানোর ঠিকানা"
+        phone: "ফোন ১"
+        phone_placehoder: "উদাহরণ: ০১৫৫XXXXXXX"
+        phone_error_message: "দয়া করে আপনার মোনাইল ফোন নাম্বার দিন, এটা আবশ্যক।"
+        facebook_id: "ফেইসবুক আইডি"
+        facebook_id_placeholder: "উদাহরণ: fb.com/username OR username"
+        facebook_id_error_massage: "দয়া করে আপনার ফেইসবুক আইডি দিন, এটা আবশ্যক।"
+        minimum_character_message: "সর্বনিম্ন অক্ষর)"
+        pasword: "পাসওয়ার্ড"
+        password_placeholder: "আপনার পাসওয়ার্ড দিন"
+        password_error_message: "দয়া করে আপনার পাসওয়ার্ড দিন, এটা আবশ্যক।"
+        confirm_password: "পাসওয়ার্ড নিশ্চিত করুন"
+        confirm_password_placeholder: "পুনরায় পাসওয়ার্ড দিন"
+        signup_button: "সাইন আপ"
+    sessions:
+      new:
+        signin_title: "নতুন একটি অর্ডার করার জন্য লগ ইন করুন"
+        email: "ইমেইল"
+        email_placeholder: "আপানার ইমেইল দিন"
+        email_error_message: "দয়া করে আপনার ইমেইল ঠিকানা দিন, এটা আবশ্যক।"
+        pasword: "পাসওয়ার্ড"
+        password_placeholder: "আপনার পাসওয়ার্ড দিন"
+        password_error_message: "দয়া করে আপনার পাসওয়ার্ড দিন, এটা আবশ্যক।"
+        remember_me: "আমাকে মনে রাখুন"
+        remember_me_label: "হ্যাঁ, আমাকে মনে রাখুন"
+        sign_in_button: "সাইন ইন"
+    shared:
+      links:
+        login: "লগ ইন"
+        forgot_your_password: "আপনার পাসওয়ার্ড মনে করতে পারছেন না?"
+        did_not_recieve_confirmation_message: "নিশ্চিত করনের নির্দেশাবলি আপনার কাছে পৌঁছেনি?"
+        did_not_recieve_unlock_message: "আনলকের নির্দেশাবলি আপনার কাছে পৌঁছেনি?"
+    unlocks:
+      new:
+        resend_unlock_instructions: "আনলকের নির্দেশাবলী আবার পাঠাও"
+        email: "ইমেইল"
+        resend_unlock_instructions_button: "আনলকের নির্দেশাবলী আবার পাঠাও"
+    passwords:
+      edit:
+        change_your_password_heading: "আপনার পাসওয়ার্ড পরিবর্তন করুন"
+        new_password: "নতুন পাসওয়ার্ড"
+        minimum_character_message: "সর্বনিম্ন অক্ষর)"
+        confirm_new_password: "নতুন পাসওয়ার্ড নিশ্চিত করুন"
+        change_my_password_button: "আপনার পাসওয়ার্ড পরিবর্তন করুন"
+      new:
+        forgot_your_password: "আপনার পাসওয়ার্ড ভুলে গিয়েছেন?"
+        reset_password_instruction: "আমাকে পাসওয়ার্ড পরিবর্তন সংক্রান্ত বিস্তারিত তথ্য পাঠান"
+        email: "ইমেইল"
+    confirmations:
+      new:
+        resend_confirmation_instructions_title: "নিশ্চিত করনের নির্দেশাবলী আবার পাঠাও"
+        email: "ইমেইল"
+        resend_confirmation_instructions_button: "নিশ্চিত করনের নির্দেশাবলী আবার পাঠাও"
+    mailer:
+      confirmation_instructions:
+        welcome: "স্বাগতম,"
+        confirmation_link: "নিচের লিঙ্কের মাধ্যমে আপনি আপনার আয়াকাউন্ট নিশ্চিত করতে পারবেন"
+        confirm_my_account: 'আপনার অ্যাকাউন্ট নিশ্চিত করুন'
+      password_change:
+        password_change: "সবিনয়ের সাথে জানানো যাচ্ছে যে, আপনার পাসওয়ার্ড পরিবর্তন হয়েছে।"
+        hello: "স্বাগতম,"
+      reset_password_instructions:
+        hello: "স্বাগতম,"
+        someone: "কেউ একজন আপনার পাসওয়ার্ড পরিবর্তনের লিঙ্কের জন্য আবেদন  করেছে। এই কাজটি আপনি নিচের লিঙ্কের মাধ্যমে করতে পারবেন।"
+        change_my_password: "আমার পাসওয়ার্ড পরিবর্তন করুন"
+        ignore: "এটা যদি আপনার অনুরোদ না হয়ে থাকে, তাহলে দয়া করে এই ইমেইলটি এড়িয়ে চলুন।"
+        until: "যতক্ষণ পর্যন্ত আপনি উপরের লিঙ্কে প্রবেশ না করবেন, ততক্ষণ আপনার পাসোয়ার্ড পরিবর্তন হবে না এবং পরবর্তিতে নতুন একটি তৈরি করুন।"
+      unlock_instructions:
+        hello: "স্বাগতম,"
+        attempts: " অনেকগুলা ব্যার্থ লগইন করার প্রচেষ্টা করার কারণে আপনার আয়াকাউন্ট লক করে দেওয়া হলো।"
+        click_to_unlock: "আপনার আয়াকাঊন্ট আনলক করার জন্য নিচের লিঙ্কে প্রবেশ করুনঃ"
+        unlock_my_account: " আমার আয়াকাউন্ট আনলক করুন"
+  comment_mailer:
+    comment_created:
+      hi: "স্বাগতম,"
+      has_commented: "এই অর্ডারে মন্তব্য করছেন!"
+  comments:
+    comment:
+      commented: "মন্তব্য করছেন"
+      ago: "আগে:"
+      delete: "মুছুন"
+      sure: "আপনি নিশ্চিত?"
+    form:
+      comment: "মন্তব্য"
+      add_comment: "মন্তব্য করুন"
+  contacts:
+    new:
+      send_message: "আমাদের কাছে আপনার বার্তা পৌঁছান"
+      your_name: "আপনার নাম"
+      email: "ইমেইল"
+      your_message: "আপনার বার্তা"
+      hint: "এই জায়গাটি খালি রাখুন!"

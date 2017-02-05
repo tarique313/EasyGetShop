@@ -6,28 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <%= csrf_meta_tags %>
+    <meta name="description" content="EasyGetShop">
+    <meta name="author" content="Gazi Tarique Mahmud">
 
+    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-   
     <%= render 'layouts/shim' %>
 
   </head>
-
   <body>
-  <%= render 'layouts/header' %>
- 
-  <div class="container"
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-    <%= yield %>
-    <%= render 'layouts/footer' %>
-  </div>
-
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <class="row">
+         <div class="panel panel-default">
+           <div class="panel-body">
+             <center>ভাষা নির্বাচন করুন: <%= link_to_unless_current "English", locale: "en"%> |
+           <%= link_to_unless_current "বাংলা", locale: "bn"%>
+             </center>
+           </div>
+         </div>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+        <%= render 'layouts/footer' %>
+      </div>
+    </div>
   </body>
 </html>

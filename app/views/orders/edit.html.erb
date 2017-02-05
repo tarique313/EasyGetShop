@@ -1,6 +1,8 @@
 <h1>অর্ডার সম্পাদনা করুন (Editing Order)</h1>
+<h1><%= t ".editing_order" %></h1>
+
 
 <%= render 'form', order: @order %>
 
-<%= link_to 'Show', @order %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to t (".show_button"), @order %> |
+<%= link_to t (".back_button"), orders_path %>

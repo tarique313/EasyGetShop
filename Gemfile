@@ -27,7 +27,6 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'figaro'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'devise-i18n'
-
 group :development, :test do
   gem 'byebug', platform: :mri
 end

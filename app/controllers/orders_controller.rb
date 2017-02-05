@@ -33,7 +33,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save
         p  current_user
-        OrderMailer.order_created(current_user.email).deliver
+        #OrderMailer.order_created(current_user.email).deliver
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else

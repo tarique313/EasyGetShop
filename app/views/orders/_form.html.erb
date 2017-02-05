@@ -1,7 +1,7 @@
 <%= form_for(order) do |f| %>
   <% if order.errors.any? %>
     <div id="error_explanation">
-      <h4><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h4>
+      <h4><%= pluralize(order.errors.count, "error") %> <%= t ".prohibated_message"%></h4>
 
       <ul>
       <% order.errors.full_messages.each do |message| %>
@@ -11,11 +11,9 @@
     </div>
   <% end %>
 <div class="row">
-
-  <div class="form-group">)(
-    <%= f.text_area :body, class: "col-md-6 col-md-offset-3", placeholder: "Paste the Aliexpress Order Url here." %>
+  <div class="form-group">
+    <%= f.text_area :body, class: "col-md-6 col-md-offset-3", placeholder: (t ".aliexpress_url") %>
   </div>
-    
 </div>
   <!-- <div class="field">
     <%#= f.label :status %>
@@ -23,7 +21,7 @@
   </div> -->
 <br>
   <div class="form-group">
-  <center><%= f.submit class: 'btn btn-primary' %></center>
+  <center><%= f.submit (t ".create_order_button"), class: 'btn btn-primary' %></center>
   </div>
   
 <% end %>
