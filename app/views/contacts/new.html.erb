@@ -1,23 +1,109 @@
-<div class="row">
+<!--<div class="row">
 <div class="col-md-6 col-md-offset-3">
 
-  <h3><%= t ".send_message" %></h3>
+  <h3><%#= t ".send_message" %></h3>
 
-  <%= simple_form_for @contact do |f| %>
-    <%= f.input :name, label: (t ".your_name"), required: true %>
-    <%= f.input :email, label: (t ".email"), required: true %>
-    <%= f.input :message, label: (t ".your_message"), :as => :text, required: true %>
+  <%#= simple_form_for @contact do |f| %>
+    <%#= f.input :name, label: (t ".your_name"), required: true %>
+    <%#= f.input :email, label: (t ".email"), required: true %>
+    <%#= f.input :message, label: (t ".your_message"), :as => :text, required: true %>
     <div class= "hidden">
-      <%= f.input :nickname, :hint => (t ".hint") %>
+      <%#= f.input :nickname, :hint => (t ".hint") %>
     </div>
     <div>
       </br>
        <div>
-    <%#= recaptcha_tags %> <!-- THIS -->
+    <%#= recaptcha_tags %> &lt;!&ndash; THIS &ndash;&gt;
   </div>
   <br>
-      <%= f.button :submit, ( t ".send_message"), :class=> "btn btn-primary" %>
+      <%#= f.button :submit, ( t ".send_message"), :class=> "btn btn-primary" %>
     </div>
-  <% end %>
+  <%# end %>
 </div>
-</div>
+</div>-->
+!-- Google Map -->
+<!-- Data API:
+     data-height="500" height of the map in pixels
+     data-address="Your address" string
+     data-zoom="number" to control map zoom when loaded
+     data-disable-controls="false/true" enable/disable map controls like pan, zoom, etc.
+     data-scrollwheel="true/false" enable/disable mouse scroll wheel zoom
+     data-marker="path_to_your_image" path to custom marker image
+     data-marker-title=" Your title" appears on marker hover
+     data-styles="[array]" you can adjust the look and feel of your map. Recommend to use https://snazzymaps.com
+ -->
+<!-- Container -->
+<section class="container space-top-3x">
+  <h1>Contacts</h1>
+  <div class="row padding-top">
+    <div class="col-sm-5 padding-bottom-2x">
+      <ul class="list-icon">
+        <li>
+          <i class="material-icons location_on"></i>
+          1111 Paribagh<br>Dhaka, Dhaka 1000, Bangladesh
+        </li>
+        <li>
+          <i class="material-icons phone"></i>
+          +8801914221142
+        </li>
+        <li>
+          <i class="material-icons phone_iphone"></i>
+          +8801552602121
+        </li>
+        <li>
+          <i class="material-icons email"></i>
+          <a href="mailto:mahmud.tarique@gmail.com">mahmud.tarique@gmail.com</a>
+        </li>
+        <li>
+          <i class="socicon-skype"></i>
+          <a href="#">skype_id</a>
+        </li>
+      </ul><!-- .list-icon -->
+      <p>Working hours: <span class="text-gray">Always Open :)</span></p>
+      <span class="display-inline" style="margin-bottom: 6px;">Social accounts: &nbsp;&nbsp;</span>
+      <div class="social-bar display-inline">
+        <a href="#" class="sb-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+          <i class="socicon-facebook"></i>
+        </a>
+        <a href="#" class="sb-google-plus" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google+">
+          <i class="socicon-googleplus"></i>
+        </a>
+        <a href="#" class="sb-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+          <i class="socicon-twitter"></i>
+        </a>
+        <a href="#" class="sb-instagram" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram">
+          <i class="socicon-instagram"></i>
+        </a>
+      </div><!-- .social-bar -->
+    </div><!-- .col-sm-5 -->
+    <div class="col-sm-7 padding-bottom-2x">
+      <form class="ajax-form">
+        <%= simple_form_for @contact do |f| %>
+
+        <div class="contact-form container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-element">
+
+                <%= f.input :name, class: "form-control", placeholder: "Your name", required: true %>
+
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-element">
+                <%= f.input :email, class: "form-control", placeholder: "Your email", required: true %>
+              </div>
+            </div>
+          </div><!-- .row -->
+          <div class="form-element">
+            <%= f.input :message, class: "form-control", :as => :text, row: 12, placeholder: "Your Message",required: true %>
+
+          </div>
+          <%= f.button :submit, ( t ".send_message"), :class=> "btn btn-primary" %>
+            <%end%>
+        </div>
+        <div class="status-message"></div>
+      </form>
+    </div><!-- .col-sm-7 -->
+  </div><!-- .row -->
+</section><!-- .container -->
