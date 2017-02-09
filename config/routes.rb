@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   scope "(:locale)", locale: /en|bn/ do
     root 'home#index'
 
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
   get 'contacts/new'
   get 'contacts/create'
   get 'faq/index'
-  get 'user_accounts/index', as: "accounts"
+    get 'useraccounts/index'
 
 
 
