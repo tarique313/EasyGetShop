@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     @comment = @order.comments.create(comments_params)
     @comment.user_id = current_user.id
 
-    CommentMailer.comment_created(current_user, @order.user, @comment.content).deliver
+   # CommentMailer.comment_created(current_user, @order.user, @comment.content).deliver
 
     if @comment.save 
     	redirect_to order_path(@order)

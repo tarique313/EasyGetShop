@@ -1,5 +1,5 @@
 
 <span class="label label-default"><strong><%= comment.user.name %></strong> <%= t ".commented" %> <%= time_ago_in_words(comment.created_at) %> <%= t ".ago"%></span>
 </br><p><%= comment.content%></p>
-<%= link_to t (".delete"), [@order, comment], method: :delete, data: { confirm: t (".sure") }%>
+<%= link_to (t ".delete"), [@order, comment], method: :delete, data: { confirm: (t ".sure") }%>
 <hr>

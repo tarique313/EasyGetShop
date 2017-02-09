@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   
-  scope "(:locale)", locale: /en|bn/ do 
-
   
+
+
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users, controllers: {registrations: "registrations"}
+  devise_for :users, controllers: {registrations: "registrations", omniauth_callbacks: "users/omniauth_callbacks"}
+    scope "(:locale)", locale: /en|bn/ do 
 
   root 'home#index'
   resources "contacts", only: [:new, :create]

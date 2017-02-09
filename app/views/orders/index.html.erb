@@ -1,7 +1,7 @@
-< class="container">
+<div class="container">
 <p id="notice"><%= notice %></p>
  <% if @orders.present? %>
-<h2><%= t ".order_owner" %> <strong><%= current_user.name%></strong> <%= t ".who"%></h2>
+<center><h2><%= t ".order_owner" %> <strong><%= current_user.name%></strong> <%= t ".who"%></h2></center>
     <center>--------------------------------------------</center>
     <center><h3><%= t ".customer_id"%> <strong><%= current_user.id%></strong></h3></center>
 <hr>

@@ -28,6 +28,7 @@ gem 'figaro'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'devise-i18n'
 gem 'material_icons'
+gem 'omniauth-facebook'
 
 
 group :development, :test do
