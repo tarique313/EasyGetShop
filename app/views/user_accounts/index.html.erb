@@ -1,0 +1,266 @@
+<!-- Content -->
+<section class="container padding-top-3x">
+  <h1 class="mobile-center">Howdy, <span class="text-semibold">John</span></h1>
+  <div class="row padding-top">
+    <div class="col-sm-9 padding-bottom-2x">
+      <!-- Nav Tabs -->
+      <ul class="nav-tabs mobile-center" role="tablist">
+        <li class="active"><a href="#profile" role="tab" data-toggle="tab">
+          <i class="material-icons person"></i>
+          Profile
+        </a></li>
+        <li><a href="#orders" role="tab" data-toggle="tab">
+          <i class="material-icons shopping_cart"></i>
+          Orders (<%#= @orders.count %>)
+        </a></li>
+        <li><a href="#whishlist" role="tab" data-toggle="tab">
+          <i class="material-icons favorite"></i>
+          Whishlist (6)
+        </a></li>
+      </ul><!-- .nav-tabs -->
+
+      <!-- Tab Panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane transition fade scale in active" id="profile">
+          <form method="post">
+            <div class="row">
+              <div class="row">
+                <div class="col-md-6">
+                  <br>
+                  <br>
+                  <p><strong>Full Name: </strong><%= current_user.name%></p>
+                  <p><strong>Email: </strong><%= current_user.email%></p>
+                  <p><strong>Shipping Address: </strong><%= current_user.address%></p>
+                  <p><strong>Phone 1: </strong><%= current_user.phone%></p>
+                  <p><strong>Phone 2: </strong></p>
+                  <p><strong>Facebook Profile ID:</strong><%= current_user.fb_id%></p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-sm-6 text-right mobile-center">
+
+              <%= link_to "Update Profile", edit_registration_path(current_user), class: "btn btn-primary waves-effect waves-light"%>
+              </div>
+            </div>
+          </form>
+        </div><!-- .tab-pane#profile -->
+        <div role="tabpanel" class="tab-pane transition fade scale" id="orders">
+          <div class="col-md-10 table-responsive">
+            <table>
+              <thead>
+              <tr>
+                <th>Order #</th>
+                <th>Date Purchased</th>
+                <th>Status</th>
+                <th>Total</th>s
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><a href="#">31719DA0567</a></td>
+                <td>December 06, 2016</td>
+                <td><span class="text-warning">In Progress</span></td>
+                <td>$1,350.00</td>
+              </tr>
+              <tr>
+                <td><a href="#">22018770CV7</a></td>
+                <td>December 06, 2016</td>
+                <td><span class="text-warning">In Progress</span></td>
+                <td>$1,350.00</td>
+              </tr>
+              <tr>
+                <td><a href="#">4B33FG45520</a></td>
+                <td>December 06, 2016</td>
+                <td><span class="text-warning">In Progress</span></td>
+                <td>$1,350.00</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- .tab-pane#orders -->
+        <div role="tabpanel" class="tab-pane transition fade scale" id="whishlist">
+          <div class="row">
+            <!-- Item -->
+            <div class="col-md-10 col-sm-6">
+              <div class="shop-item">
+                <div class="shop-thumbnail">
+                  <a href="shop-single.html" class="item-link"></a>
+
+                  <%= image_tag("shop/th02.jpg", alt: "Shop item")%>
+                  <div class="shop-item-tools">
+                    <a href="#" class="add-to-whishlist" data-toggle="tooltip" title="Remove from wishlist">
+                      <i class="material-icons close"></i>
+                    </a>
+                    <a href="#" class="add-to-cart">
+                      <em>Add to Cart</em>
+                      <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                        <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="shop-item-details">
+                  <h3 class="shop-item-title"><a href="shop-single.html">Shoulder Bag</a></h3>
+                  <span class="shop-item-price">
+                        $125.00
+                      </span>
+                </div>
+              </div><!-- .shop-item -->
+            </div>
+            <!-- Item -->
+            <div class="col-md-4 col-sm-6">
+              <div class="shop-item">
+                <div class="shop-thumbnail">
+                  <a href="shop-single.html" class="item-link"></a>
+
+                  <%= image_tag("shop/th05.jpg", alt: "Shop item")%>
+                  <div class="shop-item-tools">
+                    <a href="#" class="add-to-whishlist" data-toggle="tooltip" title="Remove from wishlist">
+                      <i class="material-icons close"></i>
+                    </a>
+                    <a href="#" class="add-to-cart">
+                      <em>Add to Cart</em>
+                      <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                        <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="shop-item-details">
+                  <h3 class="shop-item-title"><a href="shop-single.html">Wall Clock</a></h3>
+                  <span class="shop-item-price">
+                        $69.00
+                      </span>
+                </div>
+              </div><!-- .shop-item -->
+            </div>
+            <!-- Item -->
+            <div class="col-md-4 col-sm-6">
+              <div class="shop-item">
+                <div class="shop-thumbnail">
+                  <a href="shop-single.html" class="item-link"></a>
+
+                  <%= image_tag("shop/th06.jpg", alt: "Shop item")%>
+                  <div class="shop-item-tools">
+                    <a href="#" class="add-to-whishlist" data-toggle="tooltip" title="Remove from wishlist">
+                      <i class="material-icons close"></i>
+                    </a>
+                    <a href="#" class="add-to-cart">
+                      <em>Add to Cart</em>
+                      <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                        <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="shop-item-details">
+                  <h3 class="shop-item-title"><a href="shop-single.html">LED Lighting</a></h3>
+                  <span class="shop-item-price">
+                        $130.00
+                      </span>
+                </div>
+              </div><!-- .shop-item -->
+            </div>
+            <!-- Item -->
+            <div class="col-md-4 col-sm-6">
+              <div class="shop-item">
+                <div class="shop-thumbnail">
+                  <!--<a href="shop-single.html" class="item-link"></a>-->
+
+                  <%= image_tag("shop/cat01.jpg", alt: "Shop item")%>
+
+                  <div class="shop-item-tools">
+                    <a href="#" class="add-to-whishlist" data-toggle="tooltip" title="Remove from wishlist">
+                      <i class="material-icons close"></i>
+                    </a>
+                    <a href="#" class="add-to-cart">
+                      <em>Add to Cart</em>
+                      <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                        <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="shop-item-details">
+                  <h3 class="shop-item-title"><a href="shop-single.html">Hook Basket</a></h3>
+                  <span class="shop-item-price">
+                        $112.35
+                      </span>
+                </div>
+              </div><!-- .shop-item -->
+            </div>
+            <!-- Item -->
+            <div class="col-md-4 col-sm-6">
+              <div class="shop-item">
+                <div class="shop-thumbnail">
+                  <a href="shop-single.html" class="item-link"></a>
+
+                  <%= image_tag("shop/th11.jpg", alt: "Shop item")%>
+
+                  <div class="shop-item-tools">
+                    <a href="#" class="add-to-whishlist" data-toggle="tooltip" title="Remove from wishlist">
+                      <i class="material-icons close"></i>
+                    </a>
+                    <a href="#" class="add-to-cart">
+                      <em>Add to Cart</em>
+                      <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                        <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="shop-item-details">
+                  <h3 class="shop-item-title"><a href="shop-single.html">Stylish Chair</a></h3>
+                  <span class="shop-item-price">
+                        $417.00
+                      </span>
+                </div>
+              </div><!-- .shop-item -->
+            </div>
+            <!-- Item -->
+            <div class="col-md-4 col-sm-6">
+              <div class="shop-item">
+                <div class="shop-thumbnail">
+                  <a href="shop-single.html" class="item-link"></a>
+                  <%= image_tag("shop/th15.jpg", alt: "Shop item")%>
+                  <div class="shop-item-tools">
+                    <a href="#" class="add-to-whishlist" data-toggle="tooltip" title="Remove from wishlist">
+                      <i class="material-icons close"></i>
+                    </a>
+                    <a href="#" class="add-to-cart">
+                      <em>Add to Cart</em>
+                      <svg x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                        <path stroke-dasharray="19.79 19.79" stroke-dashoffset="19.79" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="shop-item-details">
+                  <h3 class="shop-item-title"><a href="shop-single.html">Tissue Holder</a></h3>
+                  <span class="shop-item-price">
+                        $76.40
+                      </span>
+                </div>
+              </div><!-- .shop-item -->
+            </div>
+          </div>
+        </div><!-- .tab-pane#whishlist -->
+      </div><!-- .tab-content -->
+    </div><!-- .col-sm-8 -->
+
+    <!-- Sidebar -->
+    <div class="col-sm-3 padding-bottom-2x">
+      <aside class="mobile-center">
+        <h3>Your reward points:</h3>
+        <h3><span class="text-semibold">1356</span> <span class="h5">points</span></h3>
+        <p class="text-sm text-gray">You can earn points on creating new orders, to get gifts from us, etc. [Rules coming soon]</p>
+        <%= link_to "Make a New Order", new_order_path, class:"btn btn-default btn-ghost icon-left btn-block"%>
+          <i class="material-icons arrow_back"></i>
+        </a>
+        <a href="#" class="btn btn-primary btn-block waves-effect waves-light space-top-none">Get more points</a>
+      </aside>
+    </div><!-- .col-sm-4 -->
+  </div><!-- .row -->
+</section><!-- .container -->

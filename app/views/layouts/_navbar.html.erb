@@ -30,10 +30,10 @@
         </li>
         <% if user_signed_in? %>
         <li><%= link_to "Create a New Order", new_order_path%></li>
-        <li><%= link_to "My Account", orders_path, class: "menu-item-has-children"%>
+        <li><%= link_to "My Account", "#", class: "menu-item-has-children"%>
           <ul class="sub-menu">
             <li><%= link_to "Edit Account", edit_user_registration_path%></li>
-            <li><%= link_to "My Account"%></li>
+            <li><%= link_to "My Account", accounts_path%></li>
           </ul>
         </li>
             <li><%= link_to "Sign Out", destroy_user_session_path, :method => 'delete'%></li>
