@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require jquery-2.1.4.min
 //= require bootstrap
-//= require jquery_ujs
 //= require bootstrap.min
 //= require smoothscroll
 //= require velocity.min
