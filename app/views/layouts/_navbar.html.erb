@@ -20,15 +20,16 @@
     <nav class="main-navigation text-center">
       <ul class="menu">
         <li><%= link_to "Home", root_path, class: "current-menu-item"%></li>
-        <li class="menu-item-has-children"><%= link_to "Orders", orders_path, class: "menu-item-has-children"%>
-          <ul class="sub-menu">
-            <li><%= link_to "Create New Order", new_order_path %></li>
-            <li><%= link_to "My Orders", orders_path%></li>
-            <li><%= link_to "Recieved Orders"%></li>
-            <li><%= link_to "Current Orders" %></li>
-          </ul>
-        </li>
+
         <% if user_signed_in? %>
+            <li class="menu-item-has-children"><%= link_to "Orders", orders_path, class: "menu-item-has-children"%>
+              <ul class="sub-menu">
+                <li><%= link_to "Create New Order", new_order_path %></li>
+                <li><%= link_to "My Orders", orders_path%></li>
+                <li><%= link_to "Recieved Orders"%></li>
+                <li><%= link_to "Current Orders" %></li>
+              </ul>
+            </li>
         <li><%= link_to "Create a New Order", new_order_path%></li>
         <li><%= link_to "My Account", "#", class: "menu-item-has-children"%>
           <ul class="sub-menu">

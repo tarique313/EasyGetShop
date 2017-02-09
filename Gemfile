@@ -21,7 +21,7 @@ gem 'devise'
 gem 'mail_form'
 gem 'simple_form'
 gem 'dotenv-rails', :require => 'dotenv/rails-now'
-gem "recaptcha", require: "recaptcha/rails"
+gem 'recaptcha', require: "recaptcha/rails"
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'figaro'

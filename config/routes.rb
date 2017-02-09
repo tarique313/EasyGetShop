@@ -5,9 +5,8 @@ Rails.application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users, controllers: {registrations: "registrations"}, skip: :omniauth_callbacks
+  devise_for :users, controllers: {registrations: "registrations"}
 
-  scope "(:locale)", locale: /en|bn/ do
     resources :users do
       member do
         get :orders
@@ -29,4 +28,4 @@ Rails.application.routes.draw do
  end
   match '/contacts', to: 'contacts#new', via: 'get'
   end
-  end
+
